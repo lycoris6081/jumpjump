@@ -349,10 +349,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 547683771158509928, guid: 4a37a59359ef8824eb90e29216016315, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756110655098045188, guid: 4a37a59359ef8824eb90e29216016315, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3437673294463661321, guid: 4a37a59359ef8824eb90e29216016315, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 6ce208131847e98419653e6676327da1, type: 2}
+    - target: {fileID: 3749708433516606791, guid: 4a37a59359ef8824eb90e29216016315, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3798203363682014428, guid: 4a37a59359ef8824eb90e29216016315, type: 3}
       propertyPath: m_Name
       value: CBox (2)
@@ -365,6 +377,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6ce208131847e98419653e6676327da1, type: 2}
+    - target: {fileID: 3873717752380237515, guid: 4a37a59359ef8824eb90e29216016315, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4611190660492791398, guid: 4a37a59359ef8824eb90e29216016315, type: 3}
       propertyPath: m_RootOrder
       value: 9
