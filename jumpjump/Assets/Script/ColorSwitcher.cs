@@ -5,7 +5,7 @@ using UnityEngine;
 public class ColorSwitcher : MonoBehaviour
 {
     private bool isYellow = true;
-    private bool canSwitch = false; // 添加一个标志位
+    private bool canSwitch = true; // 添加一个标志位
 
     private void OnMouseDown()
     {
@@ -18,8 +18,8 @@ public class ColorSwitcher : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // 检查进入触发器的对象是否是角色
-        if (other.CompareTag("Player"))
+        // 检查进入触发器的对象是否是角色，并且角色是黄色
+        if (other.CompareTag("Player") && other.GetComponent<Renderer>().material.color == Color.yellow)
         {
             canSwitch = true; // 允许点击
         }
@@ -48,6 +48,7 @@ public class ColorSwitcher : MonoBehaviour
             player.GetComponent<Renderer>().material.color = Color.yellow;
 
             isYellow = false;
+            canSwitch = false; // 切换后不允许再次点击
         }
         else
         {
@@ -58,7 +59,9 @@ public class ColorSwitcher : MonoBehaviour
             player.GetComponent<Renderer>().material.color = Color.white;
 
             isYellow = true;
+            canSwitch = false; // 切换后不允许再次点击
         }
     }
 }
+
 
