@@ -3461,7 +3461,7 @@ MonoBehaviour:
   targetPosition: {fileID: 1459146160}
   moveSpeed: 2
   camera: {fileID: 1157951913}
-  objectToClose: {fileID: 0}
+  objectToClose: {fileID: 411862380}
 --- !u!65 &671979661
 BoxCollider:
   m_ObjectHideFlags: 0

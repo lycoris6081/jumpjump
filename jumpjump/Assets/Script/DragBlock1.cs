@@ -18,7 +18,7 @@ public class DragBlock1 : MonoBehaviour
             {
                 Dragging = true;
                 // 记录物体中心相对于点击点的 X 轴偏移量
-                offsetY = hit.collider.transform.position.y - ray.GetPoint(hit.distance).y;
+                offsetY = hit.collider.transform.position.x - ray.GetPoint(hit.distance).x;
             }
         }
         else if (Input.GetMouseButtonUp(0))
@@ -33,7 +33,7 @@ public class DragBlock1 : MonoBehaviour
 
             // 仅修改 X 轴的值
             float newX = hit.collider.transform.position.x;
-            float newY = mouseWorldPosition.y-offsetY;
+            float newY = mouseWorldPosition.x- offsetY;
             float newZ = hit.collider.transform.position.z;
             // 设置物体位置
             hit.collider.transform.position = new Vector3(newX, newY, newZ);

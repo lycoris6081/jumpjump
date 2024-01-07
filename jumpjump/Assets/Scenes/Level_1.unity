@@ -6844,7 +6844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelNum: 3
   targetPosition: {fileID: 1697018693}
-  moveSpeed: 2
+  moveSpeed: 1
   camera: {fileID: 1639827462}
   objectToClose: {fileID: 2024817334}
 --- !u!65 &1676853359
