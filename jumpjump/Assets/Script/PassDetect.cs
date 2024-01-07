@@ -16,7 +16,7 @@ public class PassDetect : MonoBehaviour
     {
         if (pass)
         {
-            Invoke("Move", 0.5f);
+            Invoke("Move", 0.2f);
         }
     }
 

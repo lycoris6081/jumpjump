@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DragBlock : MonoBehaviour
+public class DragBlock1 : MonoBehaviour
 {
     public static bool Dragging;
-    private float offsetX;  // 仅保留 X 轴的偏移
+    private float offsetY;  // 仅保留 X 轴的偏移
     private RaycastHit hit;
 
     void Update()
@@ -18,7 +18,7 @@ public class DragBlock : MonoBehaviour
             {
                 Dragging = true;
                 // 记录物体中心相对于点击点的 X 轴偏移量
-                offsetX = hit.collider.transform.position.x - ray.GetPoint(hit.distance).x;
+                offsetY = hit.collider.transform.position.y - ray.GetPoint(hit.distance).y;
             }
         }
         else if (Input.GetMouseButtonUp(0))
@@ -32,9 +32,8 @@ public class DragBlock : MonoBehaviour
             Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10));
 
             // 仅修改 X 轴的值
-            float newX = mouseWorldPosition.x-offsetX;
-            // 保持 Y 和 Z 轴不变
-            float newY = hit.collider.transform.position.y;
+            float newX = hit.collider.transform.position.x;
+            float newY = mouseWorldPosition.y-offsetY;
             float newZ = hit.collider.transform.position.z;
             // 设置物体位置
             hit.collider.transform.position = new Vector3(newX, newY, newZ);

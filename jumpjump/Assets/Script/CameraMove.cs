@@ -4,8 +4,8 @@ public class CameraMove : MonoBehaviour
 {
     public Transform targetPosition; // 目标位置
     public float moveSpeed = 2f; // 移动速度
-    //public GameObject objectToClose; // 需要关闭的物体
-    //public GameObject objectToOpen;
+    public GameObject objectToClose; // 需要关闭的物体
+    public GameObject objectToOpen;
     private bool hasReachedTarget = false;
 
 
@@ -20,10 +20,10 @@ public class CameraMove : MonoBehaviour
         // 计算当前位置与目标位置的距离
         float distance = Vector3.Distance(transform.position, targetPosition.position);
 
-        // 如果距离小于0.1，关闭物体
-        if (distance < 0.1f)
+
+        if (distance <5)
         {
-            //CloseObject();
+            CloseObject();
             hasReachedTarget = true;
         }
     }
@@ -33,11 +33,11 @@ public class CameraMove : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, targetPosition.position, moveSpeed * Time.deltaTime);
     }
 
-    //void CloseObject()
-    //{
-    //    // 关闭物体（可以设置为SetActive(false)或其他关闭逻辑）
-    //    objectToClose.SetActive(false);
-    //    objectToOpen.SetActive(true);
+    void CloseObject()
+    {
+        // 关闭物体（可以设置为SetActive(false)或其他关闭逻辑）
+        objectToClose.SetActive(false);
+        objectToOpen.SetActive(true);
 
-    //}
+    }
 }

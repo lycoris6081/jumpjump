@@ -577,7 +577,7 @@ MonoBehaviour:
   targetPosition: {fileID: 1459146160}
   moveSpeed: 2
   camera: {fileID: 1157951913}
-  objectToClose: {fileID: 0}
+  objectToClose: {fileID: 222968939}
 --- !u!65 &179046088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3645,7 +3645,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7329699210886503659, guid: ce194d533b549ec45a5917744090a137, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7329699210886503659, guid: ce194d533b549ec45a5917744090a137, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3653,7 +3653,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7329699210886503659, guid: ce194d533b549ec45a5917744090a137, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7329699210886503659, guid: ce194d533b549ec45a5917744090a137, type: 3}
       propertyPath: m_LocalRotation.w

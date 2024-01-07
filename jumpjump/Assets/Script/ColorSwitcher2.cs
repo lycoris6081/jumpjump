@@ -5,7 +5,7 @@ using UnityEngine;
 public class ColorSwitcher2 : MonoBehaviour
 {
     public GameObject player; // 角色对象
-    public GameObject yellowBlock;
+    public GameObject Block;
     public GameObject whiteBlock;
 
     void Update()
@@ -22,12 +22,12 @@ public class ColorSwitcher2 : MonoBehaviour
     void CheckClick()
     {
         // 检查角色是否在黄色方块上
-        if (IsPlayerOnBlock(player, yellowBlock))
+        if (IsPlayerOnBlock(player, Block))
         {
             // 如果黄色方块被点击且角色颜色不同
-            if (IsMouseOnBlock(yellowBlock) && player.GetComponent<Renderer>().material.color != Color.yellow)
+            if (IsMouseOnBlock(Block) && player.GetComponent<Renderer>().material.color != Color.yellow)
             {
-                SwitchColors(yellowBlock, whiteBlock, Color.yellow, Color.white);
+                SwitchColors(Block, whiteBlock, Color.yellow, Color.white);
             }
         }
         // 检查角色是否在白色方块上
@@ -36,7 +36,7 @@ public class ColorSwitcher2 : MonoBehaviour
             // 如果白色方块被点击且角色颜色不同
             if (IsMouseOnBlock(whiteBlock) && player.GetComponent<Renderer>().material.color != Color.white)
             {
-                SwitchColors(whiteBlock, yellowBlock, Color.white, Color.yellow);
+                SwitchColors(whiteBlock, Block, Color.white, Color.yellow);
             }
         }
     }
