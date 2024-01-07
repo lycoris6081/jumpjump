@@ -10,6 +10,8 @@ public class SMeneger : MonoBehaviour
 
     AudioSource audioSource;
     public AudioClip ButtonSound;
+    public int levelNum;
+    public int NextNum;
 
     private void Start()
     {
@@ -19,11 +21,11 @@ public class SMeneger : MonoBehaviour
 
     public void BacktoHomePage()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(levelNum);
     }
 
     public void PLAY()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(NextNum);
     }
 }
