@@ -21,4 +21,9 @@ public class SMeneger : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void PLAY()
+    {
+        SceneManager.LoadScene(1);
+    }
 }
